@@ -1,6 +1,6 @@
 return {
-  "kevinhwang91/nvim-bqf",
-  
+  -- "kevinhwang91/nvim-bqf",
+
   "nvim-neo-tree/neo-tree.nvim",
   opts = {
     filesystem = {
@@ -19,14 +19,14 @@ return {
     }
   },
 
-  "folke/todo-comments.nvim",
-  lazy = false,
-  dependencies = { "nvim-lua/plenary.nvim" },
-  opts = {
-    -- your configuration comes here
-    -- or leave it empty to use the default settings
-    -- refer to the configuration section below
- },
+--   "folke/todo-comments.nvim",
+--   lazy = false,
+--   dependencies = { "nvim-lua/plenary.nvim" },
+--   opts = {
+--     -- your configuration comes here
+--     -- or leave it empty to use the default settings
+--     -- refer to the configuration section below
+--  },
 
   -- You can also add new plugins here as well:
   -- Add plugins, the lazy syntax
