@@ -10,8 +10,8 @@ return {
   { import = "astrocommunity.completion.tabnine-nvim" },
   { import = "astrocommunity.completion.cmp-cmdline" },
 
-  { import = "astrocommunity.debugging.bqf" },
-  { import = "astrocommunity.debugging.nvim-dap-virtal-text" },
+  { import = "astrocommunity.debugging.nvim-bqf" },
+  { import = "astrocommunity.debugging.nvim-dap-virtual-text" },
   { import = "astrocommunity.debugging.persistent-breakpoints-nvim" },
   { import = "astrocommunity.debugging.telescope-dap-nvim" },
 
@@ -35,8 +35,6 @@ return {
 
   { import = "astrocommunity.test.neotest" },
   { import = "astrocommunity.test.nvim-coverage" },
-
-  { import = "astrocommunity." },
 
   { import = "astrocommunity.pack.dart" },
   { import = "astrocommunity.pack.java" },
