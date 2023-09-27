@@ -20,7 +20,41 @@ return {
     },
   },
 
-  -- { "folke/todo-comments.nvim", opts = {}, event = "User AstroFile" },
+
+{ 'darksinge/project.nvim' },
+
+
+  {
+    'AckslD/nvim-trevJ.lua',
+    config = 'require("trevj").setup()',
+    init = function()
+      vim.keymap.set('n', '<leader>j', function()
+        require('trevj').format_at_cursor()
+      end)
+    end,
+  },
+
+  {
+    "folke/persistence.nvim",
+    event = "BufReadPre",
+    config = function()
+      require("persistence").setup({
+        dir = vim.fn.expand(vim.fn.stdpath "state" .. "/sessions/"),
+        options = { "buffers", "curdir", "tabpages", "winsize" }
+      })
+    end
+  },
+
+  { "christoomey/vim-tmux-navigator" },
+  { "tpope/vim-surround" },
+  { "felipec/vim-sanegx", event = "BufRead" },
+  {
+    "windwp/nvim-ts-autotag",
+    config = function()
+      require("nvim-ts-autotag").setup()
+    end,
+  },
+
 {
   "folke/todo-comments.nvim",
   lazy = false,
@@ -69,15 +103,6 @@ return {
       max_line_len = 400, -- ignore lines longer than this
       exclude = {}, -- list of file types to exclude highlighting
     },
-    -- TODO: test
-    -- TODO() test
-    -- FIXME OK
-    -- FIXME: OK
-    
-    -- XXX: maybe
-    
-    -- HACK: 
-    
     -- list of named colors where we try to extract the guifg from the
     -- list of highlight groups or use the hex color if hl not found as a fallback
     colors = {
